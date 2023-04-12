@@ -11,9 +11,11 @@
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            <script src="https://kit.fontawesome.com/e6a7279d9f.js" crossorigin="anonymous"></script>
         {% endblock %}
     </head>
     <body>
+        {% include "site_web_xtra_copy/partials/_header.html.twig" %}
         {% block body %}{% endblock %}
     </body>
 </html>
