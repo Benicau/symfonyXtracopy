@@ -59,4 +59,27 @@ setInterval(function () {rotationImage()}, 20);
 randomImage ()
 
 
+//slide home
+const sliders = document.querySelectorAll('.service');
+let currentSlide = 0;
+function slideService(slideIndex) {
+  for (let i = 0; i < sliders.length; i++) {
+    sliders[i].classList.add('none');
+  }
+  sliders[slideIndex].classList.remove('none');
+  sliders[slideIndex].style.opacity = 0;
+  setTimeout(() => {
+    sliders[slideIndex].style.opacity = 1;
+  }, 200);
+  currentSlide = slideIndex;
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % sliders.length;
+    slideService(currentSlide);
+  }
+
+ slideService(currentSlide);  
+ setInterval(nextSlide, 10000);
+
 
