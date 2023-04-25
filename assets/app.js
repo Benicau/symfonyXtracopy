@@ -84,3 +84,29 @@ function nextSlide() {
 
 
 
+ // menu burger
+
+ const burger = document.querySelector('.menuBurger')
+ const slideMenu = document.querySelector('.MenuNavResponsive')
+
+ burger.onclick = () => {
+  burger.classList.toggle("open");
+  slideMenu.classList.toggle("openSlide")
+};
+
+const slideMenuUl = document.querySelector('.MenuNavResponsive ul')
+slideMenuUl.onclick = () => {
+  burger.classList.toggle("open");
+  slideMenu.classList.toggle("openSlide")
+};
+
+const logo = document.querySelector('.logo')
+logo.onclick = () => {
+  burger.classList.toggle("open");
+  slideMenu.classList.toggle("openSlide")
+};
+
+
+
+
+
