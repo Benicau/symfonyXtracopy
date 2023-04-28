@@ -323,6 +323,9 @@ html {
         padding-bottom: 50px;
         top: 180vh;
         transition: all .7s;
+        @media only screen and (min-width: 1000px) {
+            display: none;
+        }
        
         ul {
            
