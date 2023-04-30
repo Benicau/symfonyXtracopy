@@ -880,3 +880,54 @@ footer {
         color: #ffffff;
     }
 }
+
+
+
+
+//connection Page
+
+.connection{
+    padding-top: 150px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1E6243;
+
+    h1{
+        color:red;
+        font-size: 30px;
+        font-family: 'mark';
+        color: #ff8a00;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .form-group{
+        width: 100%;
+        text-align: center;
+        label{
+        font-size: 27px;
+        color: white;
+        padding-top: 20px;
+    }
+    input{
+        width: 350px;
+        text-align: center;
+        margin: auto;
+        font-size: 18px;
+        background-color: #B7D14E;
+        color: #1E6243;
+        opacity: 0.6;
+        
+    }
+    }
+    .button{
+        margin-top: 20px;
+        text-align: center;
+         .btn{
+        margin: auto;
+    }
+    }
+   
+    
+    
+}
+

@@ -1,8 +1,9 @@
 {
-  "build/app.css": "/build/app.31db7790.css",
-  "build/app.js": "/build/app.3af86868.js",
-  "build/runtime.js": "/build/runtime.61b1725c.js",
-  "build/494.6e05e9af.js": "/build/494.6e05e9af.js",
-  "build/fonts/Barlow-Regular.ttf": "/build/fonts/Barlow-Regular.e7eb634d.ttf",
-  "build/fonts/ScriptoramaMarkdownJFRegular.ttf": "/build/fonts/ScriptoramaMarkdownJFRegular.0283734c.ttf"
+  "build/app.js": "http://localhost:8080/build/app.js",
+  "build/app2.js": "http://localhost:8080/build/app2.js",
+  "build/runtime.js": "http://localhost:8080/build/runtime.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-75fcbc.js": "http://localhost:8080/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-75fcbc.js",
+  "build/assets_styles_app_scss.css": "http://localhost:8080/build/assets_styles_app_scss.css",
+  "build/fonts/Barlow-Regular.ttf": "http://localhost:8080/build/fonts/Barlow-Regular.e7eb634d.ttf",
+  "build/fonts/ScriptoramaMarkdownJFRegular.ttf": "http://localhost:8080/build/fonts/ScriptoramaMarkdownJFRegular.0283734c.ttf"
 }
