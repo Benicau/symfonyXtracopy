@@ -321,7 +321,7 @@ html {
         text-align: center;
         padding-top: 100px;
         padding-bottom: 50px;
-        top: 180vh;
+        top: -180vh;
         transition: all .7s;
         @media only screen and (min-width: 1000px) {
             display: none;
@@ -391,6 +391,11 @@ html {
         z-index: -99;
         top: 50%;
         right: 50%;
+        @media only screen and (max-width: 600px) {
+            width: 30px;
+            height: 30px;
+            border-radius: 7px;
+        }
 
     }
 
@@ -399,6 +404,14 @@ html {
         z-index: -99;
         top: 50%;
         right: 50%;
+
+        @media only screen and (max-width: 600px) {
+            img{
+                width: 30px;
+            }
+            
+           
+        }
     }
 
     .homePresentation {
@@ -474,6 +487,11 @@ html {
         transform: skew(-5deg);
         margin-left: 2%;
         z-index: 3;
+        @media only screen and (max-width: 600px) {
+            -webkit-transform: skew(-1deg);
+        -moz-transform: skew(-1deg);
+        transform: skew(-1deg);
+        }
 
         .contenuAbout {
             -webkit-transform: skew(5deg);
@@ -482,6 +500,12 @@ html {
             display: flex;
             flex-direction: column;
             margin-left: 3%;
+            @media only screen and (max-width: 600px) {
+                gap:20px;
+                -webkit-transform: skew(1deg);
+                -moz-transform: skew(1deg);
+                transform: skew(1deg);
+            }
 
 
             .titre {
@@ -489,10 +513,17 @@ html {
                 gap: 30px;
                 padding-top: 120px;
                 width: 100%;
+                @media only screen and (max-width: 600px) {
+                    gap:20px;
+                }
 
                 img {
                     width: 41px;
                     height: 41px;
+                    @media only screen and (max-width: 600px) {
+                        width: 30px;
+                    height: 30px;
+                    }
                 }
 
                 h2 {
@@ -501,6 +532,10 @@ html {
                     font-family: 'mark';
                     color: #1e6243;
                     font-weight: 100;
+                    @media only screen and (max-width: 600px) {
+                        font-size: 25px;
+                    }
+
                 }
             }
 
@@ -620,10 +655,18 @@ html {
         width: 90%;
         margin-left: 5%;
         padding-bottom: 20px;
+        @media only screen and (max-width: 600px) {
+           gap:20px;
+        }
+        
 
         img {
             width: 41px;
             height: 41px;
+            @media only screen and (max-width: 600px) {
+                width: 30px;
+            height: 30px;
+            }
         }
 
         h2 {
@@ -632,6 +675,9 @@ html {
             font-family: 'mark';
             color: #1e6243;
             font-weight: 100;
+            @media only screen and (max-width: 600px) {
+                font-size: 25px;
+            }
         }
     }
 
@@ -722,6 +768,10 @@ html {
         @media only screen and (max-width: 1000px) {
             width: 100%;
         }
+        @media only screen and (max-width: 600px) {
+            gap:20px;
+         }
+         
 
         img {
             width: 41px;
@@ -729,6 +779,10 @@ html {
             margin-top: 10px;
             transform: skew(25deg);
             padding-left: 100px;
+            @media only screen and (max-width: 600px) {
+                width: 30px;
+            height: 30px;
+            }
         }
 
         h2 {
@@ -736,6 +790,9 @@ html {
             color: white;
             font-size: 35px;
             font-family: 'mark';
+            @media only screen and (max-width: 600px) {
+                font-size: 25px;
+            }
         }
     }
 
