@@ -213,22 +213,26 @@ html {
     box-shadow: 0px 4px 24px rgba(0, 0, 0, .25);
     position: sticky;
     top: 0;
-   
-   
 
-    .menuBurger{
+
+
+    .menuBurger {
         position: absolute;
         right: 25px;
         height: 50px;
         top: 14px;
         cursor: pointer;
-        z-index:  999 !important;
+        z-index: 999 !important;
         display: none;
+
         @media only screen and (max-width: 1000px) {
             display: block;
 
         }
-        .bar1, .bar2, .bar3 {
+
+        .bar1,
+        .bar2,
+        .bar3 {
             background-color: #ff8a00;
             margin-top: 8px;
             height: 2px;
@@ -236,20 +240,24 @@ html {
             border-radius: 1px;
             transition: all .7s;
         }
-        .bar2{
+
+        .bar2 {
             background-color: #1E6243;
             width: 29px;
         }
 
     }
-    .open{
-        .bar1{
+
+    .open {
+        .bar1 {
             transform: translateY(10px) rotate(-45deg);
         }
-        .bar2{
+
+        .bar2 {
             opacity: 0;
         }
-        .bar3{
+
+        .bar3 {
             transform: translateY(-10px) rotate(45deg);
         }
     }
@@ -259,15 +267,15 @@ html {
         padding-top: 10px;
         width: 20%;
         text-align: center;
-        z-index:  999 !important;
+        z-index: 999 !important;
 
         @media only screen and (max-width: 1000px) {
             width: 100%;
-            
+
 
         }
 
-       
+
 
         a {
             text-decoration: none;
@@ -312,7 +320,7 @@ html {
 
         }
     }
-   
+
     .MenuNavResponsive {
         width: 100%;
         position: absolute;
@@ -323,25 +331,27 @@ html {
         padding-bottom: 50px;
         top: -180vh;
         transition: all .7s;
+
         @media only screen and (min-width: 1000px) {
             display: none;
         }
-       
+
         ul {
-           
+
             li {
                 padding-top: 60px;
                 padding-bottom: 60px;
                 border-bottom: 1px solid #ff8a00;
                 width: 68%;
                 margin: auto;
-               
+
 
                 a {
                     font-size: 25px;
                     text-decoration: none;
                     color: #1E6243;
                     font-weight: bold;
+
                     &:hover {
                         color: #ff8a00;
                     }
@@ -351,9 +361,10 @@ html {
 
         }
     }
-    .openSlide{
-     top:0;
-       
+
+    .openSlide {
+        top: 0;
+
     }
 }
 
@@ -391,6 +402,7 @@ html {
         z-index: -99;
         top: 50%;
         right: 50%;
+
         @media only screen and (max-width: 600px) {
             width: 30px;
             height: 30px;
@@ -406,11 +418,11 @@ html {
         right: 50%;
 
         @media only screen and (max-width: 600px) {
-            img{
+            img {
                 width: 30px;
             }
-            
-           
+
+
         }
     }
 
@@ -420,6 +432,7 @@ html {
         padding-top: 110px;
         text-align: center;
         margin-left: 5%;
+
         @media only screen and (max-width: 600px) {
             width: 90%;
         }
@@ -487,10 +500,11 @@ html {
         transform: skew(-5deg);
         margin-left: 2%;
         z-index: 3;
+
         @media only screen and (max-width: 600px) {
             -webkit-transform: skew(-1deg);
-        -moz-transform: skew(-1deg);
-        transform: skew(-1deg);
+            -moz-transform: skew(-1deg);
+            transform: skew(-1deg);
         }
 
         .contenuAbout {
@@ -500,8 +514,9 @@ html {
             display: flex;
             flex-direction: column;
             margin-left: 3%;
+
             @media only screen and (max-width: 600px) {
-                gap:20px;
+                gap: 20px;
                 -webkit-transform: skew(1deg);
                 -moz-transform: skew(1deg);
                 transform: skew(1deg);
@@ -513,16 +528,18 @@ html {
                 gap: 30px;
                 padding-top: 120px;
                 width: 100%;
+
                 @media only screen and (max-width: 600px) {
-                    gap:20px;
+                    gap: 20px;
                 }
 
                 img {
                     width: 41px;
                     height: 41px;
+
                     @media only screen and (max-width: 600px) {
                         width: 30px;
-                    height: 30px;
+                        height: 30px;
                     }
                 }
 
@@ -532,6 +549,7 @@ html {
                     font-family: 'mark';
                     color: #1e6243;
                     font-weight: 100;
+
                     @media only screen and (max-width: 600px) {
                         font-size: 25px;
                     }
@@ -655,17 +673,19 @@ html {
         width: 90%;
         margin-left: 5%;
         padding-bottom: 20px;
+
         @media only screen and (max-width: 600px) {
-           gap:20px;
+            gap: 20px;
         }
-        
+
 
         img {
             width: 41px;
             height: 41px;
+
             @media only screen and (max-width: 600px) {
                 width: 30px;
-            height: 30px;
+                height: 30px;
             }
         }
 
@@ -675,6 +695,7 @@ html {
             font-family: 'mark';
             color: #1e6243;
             font-weight: 100;
+
             @media only screen and (max-width: 600px) {
                 font-size: 25px;
             }
@@ -764,14 +785,15 @@ html {
         transform: skew(-25deg);
         padding-left: 5%;
         gap: 30px;
-        
+
         @media only screen and (max-width: 1000px) {
             width: 100%;
         }
+
         @media only screen and (max-width: 600px) {
-            gap:20px;
-         }
-         
+            gap: 20px;
+        }
+
 
         img {
             width: 41px;
@@ -779,9 +801,10 @@ html {
             margin-top: 10px;
             transform: skew(25deg);
             padding-left: 100px;
+
             @media only screen and (max-width: 600px) {
                 width: 30px;
-            height: 30px;
+                height: 30px;
             }
         }
 
@@ -790,6 +813,7 @@ html {
             color: white;
             font-size: 35px;
             font-family: 'mark';
+
             @media only screen and (max-width: 600px) {
                 font-size: 25px;
             }
@@ -886,48 +910,203 @@ footer {
 
 //connection Page
 
-.connection{
+.connection {
     padding-top: 150px;
     width: 100%;
     min-height: 100vh;
     background-color: #1E6243;
 
-    h1{
-        color:red;
+    h1 {
+        color: red;
         font-size: 30px;
         font-family: 'mark';
         color: #ff8a00;
         text-align: center;
         padding-bottom: 10px;
     }
-    .form-group{
+
+    .form-group {
         width: 100%;
         text-align: center;
-        label{
-        font-size: 27px;
-        color: white;
-        padding-top: 20px;
+
+        label {
+            font-size: 27px;
+            color: white;
+            padding-top: 20px;
+        }
+
+        input {
+            width: 350px;
+            text-align: center;
+            margin: auto;
+            font-size: 18px;
+            background-color: #B7D14E;
+            color: #1E6243;
+            opacity: 0.6;
+
+        }
     }
-    input{
-        width: 350px;
-        text-align: center;
-        margin: auto;
-        font-size: 18px;
-        background-color: #B7D14E;
-        color: #1E6243;
-        opacity: 0.6;
-        
-    }
-    }
-    .button{
+
+    .button {
         margin-top: 20px;
         text-align: center;
-         .btn{
-        margin: auto;
+
+        .btn {
+            margin: auto;
+        }
     }
-    }
-   
-    
-    
+
+
+
 }
 
+// dashboard admin
+
+.administration {
+    .menu {
+        background-color: #1E6243;
+        width: 100%;
+        height: 60px;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            line-height: 60px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+
+                }
+                &:hover {
+                    a {
+                        color: #ff8a00;
+                    }
+
+                }
+            }
+
+        }
+    }
+    .content{
+        h1{
+            text-align: center;
+            padding-top: 35px;
+            color: #1E6243;
+            font-size: 25px;
+            font-family: 'mark';
+            text-decoration: underline;
+            span {
+                color: #ff8a00;
+                
+            }
+        }
+        .classic{
+            ul{
+                text-align: center;
+                padding-top: 80px;
+                li{
+                    width: 180px;
+                    height: 50px;
+                    margin: auto;
+                    background-color: #ff8a00;
+                    line-height: 50px;
+                    margin-bottom: 35px;
+                    border-radius: 10px;
+                    &:hover{
+                        background-color: white;
+                        border: 1px solid #ff8a00;
+                        a{
+                            color: #1E6243;
+                        }
+                    }
+                &:last-child{
+                    background-color: #1E6243;
+                    margin-top: 90px;
+                    &:hover{
+                        background-color: white;
+                        border: 1px solid #1E6243;
+                    }
+                }
+                    
+
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        
+
+    }
+}
+
+
+// shop connection reussi
+
+.shop{
+    h1{
+        text-align: center;
+        padding-top: 35px;
+        color: #1E6243;
+        font-size: 25px;
+        font-family: 'mark';
+        text-decoration: underline;
+        span {
+            color: #ff8a00;
+            
+        }
+    }
+    h2{
+        text-align: center;
+        margin-top: 25px;
+        color: #1E6243;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .warning{
+        text-align: center;
+        i{
+        color: red;
+        font-size: 50px;
+        padding-top: 50px;
+    }
+    }
+    
+    p{
+     color:#1E6243;
+     width: 500px;
+     text-align: center;
+     font-weight: bold;
+     font-size: 20px;
+     margin: auto;
+     padding-top: 20px;
+     line-height: 26px;
+     span{
+        color: #ff8a00;
+     }
+    }
+    .link{
+        text-align: center;
+        margin-top: 50px;
+       a{
+        font-size: 26px;
+        padding: 10px;
+        background-color: #1E6243;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+        &:hover{
+            background-color: white;
+            border: 1px solid #1E6243;
+            color: #1E6243;
+        }
+    } 
+    }
+    
+}
