@@ -1109,4 +1109,187 @@ footer {
     } 
     }
     
+    
+}
+
+
+// css new client page
+
+.client{
+    h1{
+        text-align: center;
+        padding-top: 35px;
+        color: #1E6243;
+        font-size: 25px;
+        font-family: 'mark';
+        text-decoration: underline;
+        span {
+            color: #ff8a00;
+            
+        }
+    }
+    ul{
+        text-align: center;
+        padding-top: 60px;
+        li{
+            width: 280px;
+            height: 50px;
+            margin: auto;
+            background-color: #ff8a00;
+            line-height: 46px;
+            margin-bottom: 35px;
+            border-radius: 10px;
+            &:hover{
+                background-color: white;
+                border: 1px solid #ff8a00;
+                a{
+                    color: #1E6243;
+                }
+            }
+        &:last-child{
+            background-color: #1E6243;
+            margin-top: 90px;
+            &:hover{
+                background-color: white;
+                border: 1px solid #1E6243;
+            }
+        }
+            
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 22px;
+            }
+        }
+        
+    }
+
+}
+
+
+
+//css gestion imprimante
+
+.imprimante
+{
+    h1{
+        text-align: center;
+        padding-top: 35px;
+        color: #1E6243;
+        font-size: 25px;
+        font-family: 'mark';
+        text-decoration: underline;
+        span {
+            color: #ff8a00;
+            
+        }
+    }
+    .ajout{
+        width: 250px;
+        text-decoration: none;
+        background-color: #1E6243;
+        text-align: center;
+        color: white;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 5px;
+        margin-top: 50px;
+        font-size: 20px;
+        &:hover{
+            border: 1px solid #1E6243;
+            color: #1E6243;
+            background-color: white;
+        }
+    }
+    .form-groupe{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+        label{
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+        input{
+            width: 40%;
+            margin: auto;  
+            height: 40px;
+            font-size: 25px;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        .send{
+            width: 200px;
+            border: none;
+            background-color: #1E6243;
+            height: 30px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            &:hover{
+                border: 1px solid #1E6243;
+                color: #1E6243;
+                background-color: white;
+            }
+        }
+            
+    }
+    .retourcontainer{
+        display: flex;
+    justify-content: center;
+    margin-top: 45px;
+
+        .retour{
+            text-decoration: none;
+            font-size: 20px;
+            background-color: #ff8a00;
+            color: white;
+            width: 200px;
+            text-align: center;
+            height: 30px;
+            border-radius: 5px;
+            line-height: 26px;
+            &:hover{
+                border: 1px solid #ff8a00;
+                color: #ff8a00;
+                background-color: white;
+            }
+        
+    }
+    }
+    table{
+        margin-top: 25px;
+        thead{
+            background-color: #1E6243;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+            th{
+                border: 1px solid black;
+            }
+        }
+        tbody{
+            
+            td{
+                border: 1px solid black;
+                font-size: 18px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+            .link{
+                
+                width: 250px;
+            }
+        }
+    }
+    
+
 }

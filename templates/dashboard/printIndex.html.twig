@@ -1,0 +1,40 @@
+{% extends 'baseConnect.html.twig' %}
+
+{% block title %}Magasin{% endblock %}
+
+{% block body %}
+
+<div class="imprimante">
+    <div class="container">
+        <div class="row">
+            <h1>Gestion des imprimantes de <span>Xtra-Copy</span></h1>
+            <a href="{{ path('printnew') }}" class="ajout">Ajouter une imprimante</a>
+        </div>
+        <div class="row">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Numéro</th>
+                        <th>Nom</th>
+                        <th>Ip</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                {% for imprimante in imprimantes %}
+                <tbody>
+                    <tr>
+                        <td>{{imprimante.numero}}</td>
+                        <td>{{imprimante.name}}</td>
+                        <td>{{imprimante.ip}}</td>
+                        <td class="link"><a href="" class="btn btn-warning mx-2">Modifier</a>
+                            <a href="" class="btn btn-danger mx-2">Supprimer</a>
+                        </td>
+                    </tr>
+                </tbody>
+
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
