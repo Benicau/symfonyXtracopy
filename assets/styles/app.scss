@@ -1293,3 +1293,52 @@ footer {
     
 
 }
+
+// css prix copies
+
+.pricecopy{
+    h1{
+        text-align: center;
+        padding-top: 35px;
+        color: #1E6243;
+        font-size: 25px;
+        font-family: 'mark';
+        text-decoration: underline;
+    }
+    h2{
+        text-align: center;
+        padding-top: 35px;
+        text-decoration: underline;
+        font-size: 21px;
+        color:#1E6243;
+    }
+    table{
+        margin-top: 25px;
+        thead{
+            background-color: #1E6243;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+            th{
+                border: 1px solid black;
+            }
+        }
+        tbody{
+            
+            td{
+                border: 1px solid black;
+                font-size: 18px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+            .link{
+                
+                width: 250px;
+            }
+        }
+    }
+
+
+}
