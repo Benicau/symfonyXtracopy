@@ -1,0 +1,43 @@
+{% extends 'baseConnect.html.twig' %}
+
+{% block title %}Magasin{% endblock %}
+
+{% block body %}
+
+<div class="imprimante">
+    <div class="container">
+        <div class="row">
+            <h1>ajout d'un prix pour les photocopies couleur</h1>
+        </div>
+            {{form_start(form)}}
+            
+            <div class="form-groupe">
+                {{ form_label(form.Begin) }}
+                {{ form_widget(form.Begin) }}
+                {{ form_errors(form.Begin) }}
+            </div>
+            <div class="form-groupe">
+                {{ form_label(form.End) }}
+                {{ form_widget(form.End) }}
+                {{ form_errors(form.End) }}
+            </div>
+            
+             <div class="form-groupe">
+                {{ form_label(form.Price) }}
+                {{ form_widget(form.Price) }}
+                {{ form_errors(form.Price) }}
+            </div>
+             
+            <div class="button">
+             <button type="submit" class="send">Enregister</button>
+            
+            </div>
+            <div class="retourcontainer">
+            <a href="{{ path('prixcopieindex') }}" class="retour">Retour</a>
+            </div>
+            {{form_end(form)}}
+            
+        
+    </div>
+</div>
+{% endblock %}

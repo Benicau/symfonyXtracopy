@@ -1297,6 +1297,23 @@ footer {
 // css prix copies
 
 .pricecopy{
+    .ajout{
+       
+        text-decoration: none;
+        background-color: #1E6243;
+        text-align: center;
+        color: white;
+        padding: 13px;
+        line-height: 50px;
+        border-radius: 5px;
+        margin-top: 50px;
+        font-size: 20px;
+        &:hover{
+            border: 1px solid #1E6243;
+            color: #1E6243;
+            background-color: white;
+        }
+    }
     h1{
         text-align: center;
         padding-top: 35px;
@@ -1311,6 +1328,7 @@ footer {
         text-decoration: underline;
         font-size: 21px;
         color:#1E6243;
+        padding-bottom: 20px;
     }
     table{
         margin-top: 25px;

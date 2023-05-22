@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Imprimantes;
+
 use App\Form\ImprimanteType;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\ImprimantesRepository;
@@ -44,15 +45,10 @@ class DashboardController extends AbstractController
     {
         $imprimantes = $repository->findAll();
         return $this->render('dashboard/printIndex.html.twig', [
-            'imprimantes' => $imprimantes,
+            'imprimantes' => $imprimantes
         ]);   
     }
 
-    #[Route('/prixCopyIndex', name: 'prixcopieindex')]
-    public function pricecopyindex(): Response
-    {
-        return $this->render('dashboard/photocopies/index.html.twig', []);   
-    }
 
     #[Route('/printNew', name: 'printnew')]
     public function printNew(EntityManagerInterface $manager, Request $request ): Response

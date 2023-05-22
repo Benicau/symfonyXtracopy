@@ -19,9 +19,9 @@
                         <th>Ip</th>
                         <th>Actions</th>
                     </tr>
-                </thead>
-                {% for imprimante in imprimantes %}
+                </thead> 
                 <tbody>
+                {% for imprimante in imprimantes %}
                     <tr>
                         <td>{{imprimante.numero}}</td>
                         <td>{{imprimante.name}}</td>
@@ -30,9 +30,10 @@
                             <a href="{{path('printdelete',{'id': imprimante.id})}}" class="btn btn-danger mx-2">Supprimer</a>
                         </td>
                     </tr>
+                    {% endfor %}
                 </tbody>
 
-                {% endfor %}
+                
             </table>
         </div>
     </div>
