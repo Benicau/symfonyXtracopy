@@ -7,9 +7,9 @@
 <div class="imprimante">
     <div class="container">
         <div class="row">
-            <h1>Gestion des type de papiers de <span>Xtra-Copy</span></h1>
+            <h1>Gestion des type de reliures de <span>Xtra-Copy</span></h1>
             <div class="menuPrint">
-                <a href="{{ path('app_type_paperNew') }}" class="ajout">Ajouter un type de papier</a>
+                <a href="{{ path('reliureNew') }}" class="ajout">Ajouter un type de reliure</a>
                 <a href="{{ path('app_MenuAdmin') }}" class="ajout">Retour</a>
             </div>
         </div>
@@ -25,11 +25,11 @@
                 <tbody>
                 
                     <tr>
-                    {% for type in TypesPapier %}
-                        <td>{{type.Name}}</td>
-                        <td>{{type.Price}} €</td>
-                        <td class="link"><a href="{{path('app_type_paperEdit',{'id': type.id})}}" class="btn btn-warning mx-2">Modifier</a>
-                            <a href="{{path('app_type_paperDelete',{'id': type.id})}}" class="btn btn-danger mx-2">Supprimer</a>
+                    {% for reliure in reliures %}
+                        <td>{{reliure.Name}}</td>
+                        <td>{{reliure.Price}} €</td>
+                        <td class="link"><a href="{{path('reliureEdit',{'id': reliure.id})}}" class="btn btn-warning mx-2">Modifier</a>
+                            <a href="{{path('reliureDelete',{'id': reliure.id})}}" class="btn btn-danger mx-2">Supprimer</a>
                         </td>
                     </tr>
                      {% endfor %}
