@@ -4,29 +4,22 @@
 
 {% block body %}
 <div class="administration">
-    <div class="menu">
-        <div class="container">
-            <div class="row">
-                <ul>
-                    <li><a href="">Gestion du site internet</a></li>
-                    <li><a href="">Gestion des employes</a></li>
-                    <li><a href="">Comptabilité</a></li>
-                    <li><a href="{{ path('printindex') }}">Gestion du parc d'imprimante</a></li>
-                    <li><a href="">Gestion des produits</a></li>
-                    <li><a href="{{ path('prixcopieindex') }}">Prix des photocopies</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="content">
         <div class="container">
-            <h1>Tableau de bord administration de <span>Xtra Copy Tournai</span></h1>
+            <h1>Administration de <span>Xtra Copy Tournai</span></h1>
             <div class="classic">
                 <ul>
-                    <li><a href="{{ path('app_dashboard') }}">Magasin</a></li>
+                    <li><a href="{{ path('app_dashboard') }}" target="_blank"><i class="fa-solid fa-shop"></i>Lien vers Api du magasin</a></li>         
+                    <li><a href=""><i class="fa-solid fa-coins"></i>Lien vers la comptabilité</a></li>     
+                    <li><a href=""><i class="fa-solid fa-desktop"></i>Gestion du site</a></li>  
+                    <li><a href="{{ path('app_MenuAdmin') }}"><i class="fa-solid fa-gauge-high"></i>Parametres de l'Api</a></li>           
+                </ul>
+            </div>
+            <div class="link">
+                <ul>  
                     <li><a href="{{ path('AccueilSiteWeb') }}" target="_blank">Site Internet</a></li>
                     <li><a href="">Se déconnecter</a></li>
-                </ul>
+                </ul> 
             </div>
         </div>
     </div>

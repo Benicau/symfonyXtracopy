@@ -3,14 +3,18 @@
 {% block title %}Magasin{% endblock %}
 
 {% block body %}
-<div class="pricecopy">
+<div class="imprimante">
     <div class="content">
         <div class="container">
             <h1>Prix des phococopies</h1>
+            
+            
             <div class="row">
             <div class="col-lg-6">
             <h2>Copies couleurs</h2>
+            <div class="menuPrint">
             <a href="{{ path('priceColorNew') }}" class="ajout">Ajouter prix couleur</a>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -41,7 +45,9 @@
             </div>
             <div class="col-lg-6">
             <h2>Copies Noirs et blanc</h2>
+            <div class="menuPrint">
             <a href="{{ path('priceNbNew') }}" class="ajout">Ajouter prix noir et blanc</a>
+             </div>
             <table>
                 <thead>
                     <tr>
@@ -65,8 +71,11 @@
                 {% endfor %}
                 </tbody>
             </table> 
-            </div>
             
+            </div>
+            <div class="menuPrint absolute">
+            <a href="{{ path('app_MenuAdmin') }}" class="ajout">Retour</a>
+            </div>
             
             </div>
         </div>

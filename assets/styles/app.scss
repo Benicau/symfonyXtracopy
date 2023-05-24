@@ -963,175 +963,216 @@ footer {
 // dashboard admin
 
 .administration {
-    .menu {
-        background-color: #1E6243;
-        width: 100%;
-        height: 60px;
 
-        ul {
-            display: flex;
-            justify-content: space-between;
-            line-height: 60px;
+    min-height: 100vh;
+    background-color: #BFBDC0;
 
-            li {
-                a {
-                    text-decoration: none;
-                    color: white;
-                    font-size: 14px;
-
-                }
-                &:hover {
-                    a {
-                        color: #ff8a00;
-                    }
-
-                }
-            }
-
-        }
-    }
-    .content{
-        h1{
+    .content {
+        h1 {
             text-align: center;
             padding-top: 35px;
-            color: #1E6243;
-            font-size: 25px;
-            font-family: 'mark';
-            text-decoration: underline;
+            color: #562B1A;
+            font-size: 45px;
+            font-weight: bold;
+
             span {
                 color: #ff8a00;
-                
+
             }
         }
-        .classic{
-            ul{
+
+        .classic {
+            ul {
                 text-align: center;
-                padding-top: 80px;
-                li{
-                    width: 180px;
-                    height: 50px;
+                padding-top: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+
+                li {
+                    width: 250px;
+                    height: 250px;
                     margin: auto;
-                    background-color: #ff8a00;
-                    line-height: 50px;
+                    background-color: #627281;
+                    line-height: 20px;
                     margin-bottom: 35px;
-                    border-radius: 10px;
-                    &:hover{
-                        background-color: white;
-                        border: 1px solid #ff8a00;
-                        a{
-                            color: #1E6243;
+                    border-radius: 125px;
+                    position: relative;
+
+
+
+
+
+                    a {
+                        text-decoration: none;
+                        color: #BFBDC0;
+                        font-size: 25px;
+                        font-weight: bold;
+                        line-height: 25px;
+                        display: block;
+                        padding-top: 150px;
+                        padding-bottom: 50px;
+
+
+                        i {
+                            font-size: 75px;
+                            position: absolute;
+                            color: #ff8a00;
+                            top: 36%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            opacity: 0.8;
                         }
                     }
-                &:last-child{
-                    background-color: #1E6243;
-                    margin-top: 90px;
-                    &:hover{
-                        background-color: white;
-                        border: 1px solid #1E6243;
+
+                    &:hover {
+                        background-color: #ff8a00;
+
+
+                        a {
+                            color: #562B1A;
+                        }
+
+                        i {
+                            color: #562B1A;
+                        }
                     }
                 }
-                    
+            }
 
-                    a{
+        }
+
+        .link {
+
+            ul {
+                display: flex;
+
+                margin-top: 25px;
+                justify-content: space-evenly;
+                width: 100%;
+
+                li {
+                    width: 250px;
+                    background-color: #627281;
+                    height: 55px;
+                    text-align: center;
+                    line-height: 55px;
+                    border-radius: 10px;
+
+                    a {
                         text-decoration: none;
+                        font-size: 30px;
                         color: white;
-                        font-size: 22px;
+                        display: block;
+                    }
+
+                    &:hover {
+                        background-color: #ff8a00;
                     }
                 }
             }
         }
-        
-
     }
 }
 
 
 // shop connection reussi
 
-.shop{
-    h1{
+.shop {
+    h1 {
         text-align: center;
         padding-top: 35px;
         color: #1E6243;
         font-size: 25px;
         font-family: 'mark';
         text-decoration: underline;
+
         span {
             color: #ff8a00;
-            
+
         }
     }
-    h2{
+
+    h2 {
         text-align: center;
         margin-top: 25px;
         color: #1E6243;
         font-weight: bold;
         font-size: 25px;
     }
-    .warning{
+
+    .warning {
         text-align: center;
-        i{
-        color: red;
-        font-size: 50px;
-        padding-top: 50px;
+
+        i {
+            color: red;
+            font-size: 50px;
+            padding-top: 50px;
+        }
     }
+
+    p {
+        color: #1E6243;
+        width: 500px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin: auto;
+        padding-top: 20px;
+        line-height: 26px;
+
+        span {
+            color: #ff8a00;
+        }
     }
-    
-    p{
-     color:#1E6243;
-     width: 500px;
-     text-align: center;
-     font-weight: bold;
-     font-size: 20px;
-     margin: auto;
-     padding-top: 20px;
-     line-height: 26px;
-     span{
-        color: #ff8a00;
-     }
-    }
-    .link{
+
+    .link {
         text-align: center;
         margin-top: 50px;
-       a{
-        font-size: 26px;
-        padding: 10px;
-        background-color: #1E6243;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        text-align: center;
-        &:hover{
-            background-color: white;
-            border: 1px solid #1E6243;
-            color: #1E6243;
+
+        a {
+            font-size: 26px;
+            padding: 10px;
+            background-color: #1E6243;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+
+            &:hover {
+                background-color: white;
+                border: 1px solid #1E6243;
+                color: #1E6243;
+            }
         }
-    } 
     }
-    
-    
+
+
 }
 
 
 // css new client page
 
-.client{
-    h1{
+.client {
+    h1 {
         text-align: center;
         padding-top: 35px;
         color: #1E6243;
         font-size: 25px;
         font-family: 'mark';
         text-decoration: underline;
+
         span {
             color: #ff8a00;
-            
+
         }
     }
-    ul{
+
+    ul {
         text-align: center;
         padding-top: 60px;
-        li{
+
+        li {
             width: 280px;
             height: 50px;
             margin: auto;
@@ -1139,30 +1180,34 @@ footer {
             line-height: 46px;
             margin-bottom: 35px;
             border-radius: 10px;
-            &:hover{
+
+            &:hover {
                 background-color: white;
                 border: 1px solid #ff8a00;
-                a{
+
+                a {
                     color: #1E6243;
                 }
             }
-        &:last-child{
-            background-color: #1E6243;
-            margin-top: 90px;
-            &:hover{
-                background-color: white;
-                border: 1px solid #1E6243;
-            }
-        }
-            
 
-            a{
+            &:last-child {
+                background-color: #1E6243;
+                margin-top: 90px;
+
+                &:hover {
+                    background-color: white;
+                    border: 1px solid #1E6243;
+                }
+            }
+
+
+            a {
                 text-decoration: none;
                 color: white;
                 font-size: 22px;
             }
         }
-        
+
     }
 
 }
@@ -1171,188 +1216,165 @@ footer {
 
 //css gestion imprimante
 
-.imprimante
-{
-    h1{
+.imprimante {
+    background-color: #BFBDC0;
+    min-height: 100vh;
+
+    h1 {
         text-align: center;
         padding-top: 35px;
-        color: #1E6243;
-        font-size: 25px;
-        font-family: 'mark';
-        text-decoration: underline;
+        color: #562B1A;
+        font-size: 45px;
+        font-weight: bold;
+        padding-bottom: 25px;
+       
+
         span {
             color: #ff8a00;
+
+        } 
+        
+    }
+    h2{
+            color: #ff8a00;
+            text-decoration: underline;
+            font-size: 22px;
+            font-weight: bold;
+           
+            text-align: center;
+        }
+
+    .menuPrint {
+        margin-top: 35px;
+        padding-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        a {
             
+            text-decoration: none;
+            background-color: #627281;
+            border: 1px solid #627281;
+            text-align: center;
+            color: white;
+           
+            
+            border-radius: 5px;
+           
+            font-size: 20px;
+            padding: 10px 10px;
+
+            &:hover {
+               
+                color: #627281;
+                background-color: white;
+            }
         }
+
     }
-    .ajout{
-        width: 250px;
-        text-decoration: none;
-        background-color: #1E6243;
-        text-align: center;
-        color: white;
-        height: 50px;
-        line-height: 50px;
-        border-radius: 5px;
-        margin-top: 50px;
-        font-size: 20px;
-        &:hover{
-            border: 1px solid #1E6243;
-            color: #1E6243;
-            background-color: white;
-        }
+    .absolute{
+        position: absolute;
+        top:1%;
     }
-    .form-groupe{
+
+    .form-groupe {
         display: flex;
         flex-direction: column;
         text-align: center;
         padding-top: 20px;
-        label{
+
+        label {
             padding-bottom: 10px;
             font-weight: bold;
         }
-        input{
+
+        input {
             width: 40%;
-            margin: auto;  
+            margin: auto;
             height: 40px;
             font-size: 25px;
             line-height: 40px;
             text-align: center;
         }
     }
-    .button{
+
+    .button {
         display: flex;
         justify-content: center;
-        .send{
+
+        .send {
             width: 200px;
             border: none;
             background-color: #1E6243;
-            height: 30px;
+            height: 40px;
             border-radius: 5px;
             color: white;
             text-align: center;
             margin-top: 20px;
-            &:hover{
+            font-size: 22px;
+            line-height: 37px;
+
+            &:hover {
                 border: 1px solid #1E6243;
                 color: #1E6243;
                 background-color: white;
             }
         }
-            
-    }
-    .retourcontainer{
-        display: flex;
-    justify-content: center;
-    margin-top: 45px;
 
-        .retour{
+    }
+
+    .retourcontainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+
+        .retour {
             text-decoration: none;
-            font-size: 20px;
-            background-color: #ff8a00;
+            background-color: #627281;
             color: white;
             width: 200px;
             text-align: center;
-            height: 30px;
+            height: 40px;
             border-radius: 5px;
-            line-height: 26px;
-            &:hover{
-                border: 1px solid #ff8a00;
-                color: #ff8a00;
+            line-height: 37px;
+            font-size: 22px;
+
+            &:hover {
+                border: 1px solid #627281;
+                color: #627281;;
                 background-color: white;
             }
-        
+
+        }
     }
-    }
-    table{
+
+    table {
         margin-top: 25px;
-        thead{
-            background-color: #1E6243;
+
+        thead {
+            background-color: #627281;
             height: 30px;
             line-height: 30px;
             color: white;
             text-align: center;
-            th{
+
+            th {
                 border: 1px solid black;
+                width: 85px;
             }
         }
-        tbody{
-            
-            td{
+
+        tbody {
+
+            td {
                 border: 1px solid black;
                 font-size: 18px;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 text-align: center;
             }
-            .link{
-                
-                width: 250px;
-            }
-        }
-    }
-    
 
-}
+            .link {
 
-// css prix copies
-
-.pricecopy{
-    .ajout{
-       
-        text-decoration: none;
-        background-color: #1E6243;
-        text-align: center;
-        color: white;
-        padding: 13px;
-        line-height: 50px;
-        border-radius: 5px;
-        margin-top: 50px;
-        font-size: 20px;
-        &:hover{
-            border: 1px solid #1E6243;
-            color: #1E6243;
-            background-color: white;
-        }
-    }
-    h1{
-        text-align: center;
-        padding-top: 35px;
-        color: #1E6243;
-        font-size: 25px;
-        font-family: 'mark';
-        text-decoration: underline;
-    }
-    h2{
-        text-align: center;
-        padding-top: 35px;
-        text-decoration: underline;
-        font-size: 21px;
-        color:#1E6243;
-        padding-bottom: 20px;
-    }
-    table{
-        margin-top: 25px;
-        thead{
-            background-color: #1E6243;
-            height: 30px;
-            line-height: 30px;
-            color: white;
-            text-align: center;
-            th{
-                border: 1px solid black;
-            }
-        }
-        tbody{
-            
-            td{
-                border: 1px solid black;
-                font-size: 18px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                text-align: center;
-            }
-            .link{
-                
                 width: 250px;
             }
         }
@@ -1360,3 +1382,4 @@ footer {
 
 
 }
+
