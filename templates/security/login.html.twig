@@ -7,16 +7,18 @@
 
 <div class="connection">
     <div class="container">
-        <div class="row">
+       <div class="row">
             <div class="col-6 offset-3">
-                <h1>Connection Xtra-copy Magasin</h1>
-                {% if error %}
-                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                <h1>Connection Xtra-copy Magasin</h1>          
+                {% if hasError %}
+                    <div class="alert">
+                        Une erreur est survenue, le nom d'utilisateur ou le mot de passe est invalide
+                    </div>
                 {% endif %}
-                <form action="#" method="post">
+                <form action="{{ path('account_login')}}" method="POST">
                     <div class="form-group">
                         <label for="username" class="form-label mt3 text-center">Adresse email</label>
-                        <input type="email" class="form-control" id="username" name="_username" value="{{last_username}}">
+                        <input type="email" class="form-control" id="username" name="_username" value="{{username}}">
                     </div>
                     <div class="form-group mt-3">
                         <label for="password" class="form-label mt3">Mot de passe</label>

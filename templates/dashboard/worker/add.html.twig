@@ -1,0 +1,40 @@
+{% extends 'baseConnect.html.twig' %}
+
+{% block title %}Magasin{% endblock %}
+
+{% block body %}
+
+<div class="imprimante">
+    <div class="container">
+        <div class="row">
+           <h1>Ajouter un employé ou école</h1>
+        </div>
+        <div class="row">
+        {{form_start(form)}}    
+            <div class="form-groupe">
+                {{ form_label(form.email) }}
+                {{ form_widget(form.email) }}
+                {{ form_errors(form.email) }}
+            </div>
+            <div class="form-groupe">
+                {{ form_label(form.roles) }}
+                {{ form_widget(form.roles) }}
+                {{ form_errors(form.roles) }}
+            </div>
+            <div class="form-groupe">
+                {{ form_label(form.password) }}
+                {{ form_widget(form.password) }}
+                {{ form_errors(form.password) }}
+            </div>
+            <div class="button">
+             <button type="submit" class="send">Enregister</button>
+            
+            </div>
+            <div class="retourcontainer">
+            <a href="{{ path('app_worker') }}" class="retour">Retour</a>
+            </div>
+        {{form_end(form)}}
+        </div>
+    </div>
+</div>
+{% endblock %}

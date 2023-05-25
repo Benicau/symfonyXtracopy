@@ -13,14 +13,28 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        admin: 
+            pattern: ^/loginAdminXtra
+            provider: app_user_provider
+            form_login: 
+                default_target_path: app_dashboardAdmin
+                login_path : account_login
+                check_path : account_login
+            logout: 
+                path: account_logout
+                target: homepage
         main:
             lazy: true
             provider: app_user_provider
-            custom_authenticator: App\Security\SecurityControllerAuthenticator
-            logout:
-                path: app_logout
-                # where to redirect after logout
-                # target: app_any_route
+            form_login :
+                login_path : account_login
+                check_path : account_login
+            logout : 
+                path : account_logout
+                target : account_login
+            login_throttling:
+                max_attempts: 4
+                interval : '15 minutes'
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall

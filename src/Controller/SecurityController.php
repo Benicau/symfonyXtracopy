@@ -9,24 +9,33 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
-    #[Route(path: '/loginAdminXtra', name: 'app_login')]
-    public function login(AuthenticationUtils $authenticationUtils): Response
+    /**
+     * Connect to the administration
+     *
+     * @param AuthenticationUtils $utils
+     * @return Response
+     */
+    #[Route('/loginAdminXtra', name: 'account_login')]
+    // #[IsGranted("ROLE_ADMIN")]
+    public function index(AuthenticationUtils $utils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
+        $error = $utils->getLastAuthenticationError();
+        $username = $utils->getLastUsername();
 
-        // get the login error if there is one
-        $error = $authenticationUtils->getLastAuthenticationError();
-        // last username entered by the user
-        $lastUsername = $authenticationUtils->getLastUsername();
-
-        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        return $this->render('security/login.html.twig', [
+            'hasError' => $error !== null,
+            'username' => $username
+        ]);
     }
 
-    #[Route(path: '/logout', name: 'app_logout')]
-    public function logout(): void
+     /**
+     * Permet la déconnexion de l'utilisateur
+     *
+     * @return void
+     */
+    #[Route("/logout", name:"account_logout")]
+    public function logout():void
     {
-       //nothing to do here
+        //
     }
 }
