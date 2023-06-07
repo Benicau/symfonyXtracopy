@@ -38,6 +38,12 @@ class ImprimanteType extends AbstractType
                 'placeholder' => "",
             ],
             ])
+            ->add('MibColorA42', TextType::class, [
+                'label' => "Entrez le code MIB Couleur A4 2 de l'imprimante",
+                'attr' => [
+                'placeholder' => "",
+            ],
+            ])
             ->add('mibColorA3', TextType::class, [
                 'label' => "Entrez le code MIB Couleur A3 de l'imprimante",
                 'attr' => [
@@ -46,6 +52,12 @@ class ImprimanteType extends AbstractType
             ])
             ->add('mibBlackWitheA4', TextType::class, [
                 'label' => "Entrez le code MIB N/B A4 de l'imprimante",
+                'attr' => [
+                'placeholder' => "",
+            ],
+            ])
+            ->add('MibBlackWitheA42', TextType::class, [
+                'label' => "Entrez le code MIB N/B A4 2 de l'imprimante",
                 'attr' => [
                 'placeholder' => "",
             ],

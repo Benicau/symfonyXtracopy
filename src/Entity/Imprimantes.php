@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ImprimantesRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ImprimantesRepository::class)]
@@ -33,6 +34,18 @@ class Imprimantes
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $mibBlackWitheA3 = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $MibColorA42 = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $MibBlackWitheA42 = null;
+
+    #[ORM\Column(type: Types::BIGINT, nullable: true)]
+    private ?string $CompteurGénéralColor = null;
+
+    #[ORM\Column(type: Types::BIGINT, nullable: true)]
+    private ?string $CompteurGénéralBlackWhite = null;
 
     public function getId(): ?int
     {
@@ -119,6 +132,54 @@ class Imprimantes
     public function setMibBlackWitheA3(?string $mibBlackWitheA3): self
     {
         $this->mibBlackWitheA3 = $mibBlackWitheA3;
+
+        return $this;
+    }
+
+    public function getMibColorA42(): ?string
+    {
+        return $this->MibColorA42;
+    }
+
+    public function setMibColorA42(?string $MibColorA42): self
+    {
+        $this->MibColorA42 = $MibColorA42;
+
+        return $this;
+    }
+
+    public function getMibBlackWitheA42(): ?string
+    {
+        return $this->MibBlackWitheA42;
+    }
+
+    public function setMibBlackWitheA42(?string $MibBlackWitheA42): self
+    {
+        $this->MibBlackWitheA42 = $MibBlackWitheA42;
+
+        return $this;
+    }
+
+    public function getCompteurGénéralColor(): ?string
+    {
+        return $this->CompteurGénéralColor;
+    }
+
+    public function setCompteurGénéralColor(?string $CompteurGénéralColor): self
+    {
+        $this->CompteurGénéralColor = $CompteurGénéralColor;
+
+        return $this;
+    }
+
+    public function getCompteurGénéralBlackWhite(): ?string
+    {
+        return $this->CompteurGénéralBlackWhite;
+    }
+
+    public function setCompteurGénéralBlackWhite(?string $CompteurGénéralBlackWhite): self
+    {
+        $this->CompteurGénéralBlackWhite = $CompteurGénéralBlackWhite;
 
         return $this;
     }
