@@ -33,13 +33,84 @@ class DashboardController extends AbstractController
         ]);
     }
 
-    #[Route('/dashboard/client', name: 'clientNew')]
+    #[Route('/dashboard/apiCaisse/menu', name: 'clientNew')]
     public function newClient(): Response
     {
-        return $this->render('dashboard/caisse.html.twig', [
+        return $this->render('dashboard/apiCaisse/caisse.html.twig', [
             'controller_name' => 'DashboardController',
         ]);
     }
+
+    #[Route('/dashboard/apiCaisse/abo/index', name: 'aboIndex')]
+    public function aboIndex(): Response
+    {
+        return $this->render('dashboard/apiCaisse/indexAbo.html.twig', [
+            'controller_name' => 'DashboardController',
+        ]);
+    }
+
+    #[Route('/dashboard/apiCaisse/abo/add', name: 'aboAdd')]
+    public function aboAdd(): Response
+    {
+        return $this->render('dashboard/apiCaisse/addAbo.html.twig', [
+            'controller_name' => 'DashboardController',
+        ]);
+    }
+
+    #[Route('/dashboard/apiCaisse/abo/recherche', name: 'abosearch')]
+    public function abosearch(): Response
+    {
+        return $this->render('dashboard/apiCaisse/rechercheAbo.html.twig', [
+            'controller_name' => 'DashboardController',
+        ]);
+    }
+
+    #[Route('/dashboard/apiCaisse/abo/indexClient', name: 'indexClient')]
+    public function indexClient(): Response
+    {
+        return $this->render('dashboard/apiCaisse/indexClient.html.twig', [
+            'controller_name' => 'DashboardController',
+        ]);
+    }
+
+    #[Route('/dashboard/apiCaisse/abo/noPrint', name: 'noPrint')]
+    public function noPrint(): Response
+    {
+        return $this->render('dashboard/apiCaisse/noPrint.html.twig', [
+            'controller_name' => 'DashboardController',
+        ]);
+    }
+
+    #[Route('/dashboard/apiCaisse/abo/noAbo', name: 'noAbo')]
+    public function noAbo(): Response
+    {
+        return $this->render('dashboard/apiCaisse/noAbo.html.twig', [
+            'controller_name' => 'DashboardController',
+        ]);
+    }
+
+    #[Route('/dashboard/apiCaisse/abo/withAbo', name: 'withAbo')]
+    public function withAbo(): Response
+    {
+        return $this->render('dashboard/apiCaisse/withAbo.html.twig', [
+            'controller_name' => 'DashboardController',
+        ]);
+    }
+
+    #[Route('/dashboard/apiCaisse/abo/addAbo', name: 'addAboMenu')]
+    public function addAboMenu(): Response
+    {
+        return $this->render('dashboard/apiCaisse/addAboMenu.html.twig', [
+            'controller_name' => 'DashboardController',
+        ]);
+    }
+
+
+
+
+
+
+
 
 
 

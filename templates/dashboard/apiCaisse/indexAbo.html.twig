@@ -1,0 +1,25 @@
+{% extends 'baseConnect.html.twig' %}
+
+{% block title %}Abonnement index{% endblock %}
+
+{% block body %}
+<div class="administration">
+    <div class="content">
+        <div class="container">
+            <h1>Système de caisse de <span>Xtra Copy</span> : Abonnement</h1>
+            <div class="classic">
+                <ul>
+                    <li><a href="{{ path('aboAdd') }}"><i class="fa-solid fa-plus"></i>Nouveau abonné</a></li>         
+                    <li><a href="{{ path('abosearch') }}"><i class="fa-solid fa-magnifying-glass"></i>Recherche abonné</a></li>             
+                </ul>
+            </div>
+            <div class="link">
+                <ul>  
+                    <li><a href="{{ path('clientNew') }}">Retour</a></li>
+                </ul> 
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
