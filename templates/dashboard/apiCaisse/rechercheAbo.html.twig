@@ -1,22 +1,18 @@
 {% extends 'baseConnect.html.twig' %}
-
 {% block title %}Recherche abonnement{% endblock %}
-
 {% block body %}
 <div class="administration">
     <div class="content">
         <div class="container">
-            <h1>Système de caisse de <span>Xtra Copy</span> : Recherche abonnement</h1>
-            <div class="classic">
-                
-            </div>
+            {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
+            <h1>Caisse de <span>Xtra Copy</span> : Recherche abonné</h1>
             <div class="link">
-                <ul>  
+                <ul>
                     <li><a href="{{ path('aboIndex') }}">Retour</a></li>
-                </ul> 
+                </ul>
             </div>
         </div>
-        </div>
+        {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
     </div>
 </div>
 {% endblock %}

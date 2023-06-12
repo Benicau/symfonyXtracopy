@@ -965,7 +965,9 @@ footer {
 .administration {
 
     min-height: 100vh;
-    background-color: #BFBDC0;
+   
+    background: rgb(0,184,140);
+background: linear-gradient(153deg, rgba(0,184,140,1) 0%, rgba(19,55,50,1) 100%);
 
     .content {
         h1 {
@@ -976,9 +978,76 @@ footer {
             font-weight: bold;
 
             span {
-                color: #ff8a00;
+                color: #ffdc09;
 
             }
+        }
+        .footer{
+            width: 100%;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            bottom: 0;
+            p{
+                font-size: 25px;
+                color:#B7D14E;
+                line-height: 40px;
+                margin-left: 35px;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                margin-right: 35px;
+                line-height: 40px;
+                &:hover{
+                    color: #B7D14E;
+                }
+            }
+        
+            
+        }
+        .logo{
+            display: flex;
+            gap: 25px;
+            position: absolute;
+            left: 20%;
+            top: 3%;
+            left: 3%;
+            .rond{
+                width: 50px;
+                height: 50px;
+                background-color: #ffdc06;
+                border-radius: 25px;
+               
+
+            }
+            p{
+                line-height: 50px;
+                color: #562B1A;
+                font-size: 35px;
+                padding-left: 15px;
+            }
+            .groupe{
+                display: flex;
+                gap: 5px;
+                flex-wrap: wrap;
+                width: 60px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                opacity: 0.4;
+            
+                .circle{
+                width:3px;
+                height: 3px;
+                background-color: white;
+                border-radius: 2px;
+            }
+            }
+            
         }
 
         .classic {
@@ -993,7 +1062,7 @@ footer {
                     width: 250px;
                     height: 250px;
                     margin: auto;
-                    background-color: #627281;
+                    background-color: rgba(0, 0, 0, 0.1);
                     line-height: 20px;
                     margin-bottom: 35px;
                     border-radius: 125px;
@@ -1017,7 +1086,7 @@ footer {
                         i {
                             font-size: 75px;
                             position: absolute;
-                            color: #ff8a00;
+                            color: #ffdc09;
                             top: 36%;
                             left: 50%;
                             transform: translate(-50%, -50%);
@@ -1026,7 +1095,7 @@ footer {
                     }
 
                     &:hover {
-                        background-color: #ff8a00;
+                        background-color: #ffdc09;
 
 
                         a {
@@ -1053,7 +1122,7 @@ footer {
 
                 li {
                     width: 250px;
-                    background-color: #627281;
+                    background-color: rgba(0, 0, 0, 0.1);
                     height: 55px;
                     text-align: center;
                     line-height: 55px;
@@ -1219,6 +1288,7 @@ footer {
 .imprimante {
     background-color: #BFBDC0;
     min-height: 100vh;
+    
 
     h1 {
         text-align: center;

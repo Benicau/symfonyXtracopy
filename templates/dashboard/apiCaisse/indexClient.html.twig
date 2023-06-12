@@ -1,27 +1,29 @@
 {% extends 'baseConnect.html.twig' %}
-
 {% block title %}{% endblock %}
-
 {% block body %}
 <div class="administration">
     <div class="content">
         <div class="container">
-            <h1>Système de caisse de <span>Xtra Copy</span> : client</h1>
+            {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
+            <h1>Caisse de <span>Xtra Copy</span> : client</h1>
             <div class="classic">
                 <ul>
-                    <li><a href="{{ path('noPrint') }}"><i class="fa-solid fa-file-circle-xmark"></i>Pas de photocopie</a></li>
-                    <li><a href="{{ path('noAbo') }}"><i class="fa-solid fa-circle-xmark"></i>Photocopies sans abonnement</a></li>         
-                    <li><a href="{{ path('withAbo') }}"><i class="fa-solid fa-user"></i>Photocopies avec abonnement</a></li>     
-                    <li><a href="{{ path('addAboMenu') }}"><i class="fa-solid fa-plus"></i>Ajouter un abonné</a></li>        
+                    <li><a href="{{ path('noPrint') }}"><i class="fa-solid fa-file-circle-xmark"></i>Pas de
+                            photocopie</a></li>
+                    <li><a href="{{ path('noAbo') }}"><i class="fa-solid fa-circle-xmark"></i>Photocopies sans
+                            abonnement</a></li>
+                    <li><a href="{{ path('withAbo') }}"><i class="fa-solid fa-user"></i>Photocopies avec abonnement</a>
+                    </li>
+                    <li><a href="{{ path('addAboMenu') }}"><i class="fa-solid fa-plus"></i>Ajouter un abonné</a></li>
                 </ul>
             </div>
             <div class="link">
-                <ul>  
+                <ul>
                     <li><a href="{{ path('clientNew') }}">Retour</a></li>
-                </ul> 
+                </ul>
             </div>
         </div>
-        </div>
+        {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
     </div>
 </div>
 {% endblock %}

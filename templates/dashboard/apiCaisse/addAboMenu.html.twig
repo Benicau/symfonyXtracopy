@@ -1,15 +1,14 @@
 {% extends 'baseConnect.html.twig' %}
-
 {% block title %}{% endblock %}
-
 {% block body %}
 <div class="administration">
     <div class="content">
         <div class="container">
+        {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
             <h1>Système de caisse de <span>Xtra Copy</span> : client</h1>
-           <h2>Ajoute abonnee</h2>
+           <h2>Ajoute abonne</h2>
         </div>
-        </div>
-    </div>
+        {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
+    </div>    
 </div>
 {% endblock %}

@@ -1,26 +1,27 @@
 {% extends 'baseConnect.html.twig' %}
-
 {% block title %}{% endblock %}
-
 {% block body %}
 <div class="administration">
     <div class="content">
         <div class="container">
-            <h1>Système de caisse de <span>Xtra Copy</span> : Accueil</h1>
+            {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
+            <h1>Caisse de <span>Xtra Copy</span> : Accueil</h1>
             <div class="classic">
                 <ul>
-                    <li><a href="{{ path('indexClient') }}"><i class="fa-solid fa-cart-shopping"></i>Nouveau Client</a></li>         
-                    <li><a href="{{ path('aboIndex') }}"><i class="fa-solid fa-user"></i>Gestion des abonnements</a></li>     
-                    <li><a href=""><i class="fa-solid fa-coins"></i>Solde de la journée</a></li>        
+                    <li><a href="{{ path('indexClient') }}"><i class="fa-solid fa-cart-shopping"></i>Nouveau Client</a>
+                    </li>
+                    <li><a href="{{ path('aboIndex') }}"><i class="fa-solid fa-user"></i>Gestion des abonnements</a>
+                    </li>
+                    <li><a href=""><i class="fa-solid fa-coins"></i>Solde de la journée</a></li>
                 </ul>
             </div>
             <div class="link">
-                <ul>  
+                <ul>
                     <li><a href="">Se déconnecter</a></li>
-                </ul> 
+                </ul>
             </div>
         </div>
-        </div>
+        {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
     </div>
 </div>
 {% endblock %}

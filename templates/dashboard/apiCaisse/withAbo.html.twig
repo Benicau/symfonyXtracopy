@@ -5,11 +5,13 @@
 {% block body %}
 <div class="administration">
     <div class="content">
+        {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
         <div class="container">
-            <h1>Système de caisse de <span>Xtra Copy</span> : client</h1>
-           <h2>recherche abonner</h2>
+            <h1>Caisse de <span>Xtra Copy</span> : Recherche abonné</h1>
+            <h2>recherche abonner</h2>
         </div>
-        </div>
+        {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
     </div>
 </div>
+
 {% endblock %}

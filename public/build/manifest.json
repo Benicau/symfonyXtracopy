@@ -5,5 +5,6 @@
   "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-75fcbc.js": "http://localhost:8080/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-75fcbc.js",
   "build/assets_styles_app_scss.css": "http://localhost:8080/build/assets_styles_app_scss.css",
   "build/fonts/Barlow-Regular.ttf": "http://localhost:8080/build/fonts/Barlow-Regular.e7eb634d.ttf",
-  "build/fonts/ScriptoramaMarkdownJFRegular.ttf": "http://localhost:8080/build/fonts/ScriptoramaMarkdownJFRegular.0283734c.ttf"
+  "build/fonts/ScriptoramaMarkdownJFRegular.ttf": "http://localhost:8080/build/fonts/ScriptoramaMarkdownJFRegular.0283734c.ttf",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-514134.js": "http://localhost:8080/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-514134.js"
 }
