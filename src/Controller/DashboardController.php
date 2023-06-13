@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Repository\PricePhotoRepository;
+use App\Repository\PriceTypePaperRepository;
+use App\Repository\ReliuresRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -74,10 +77,17 @@ class DashboardController extends AbstractController
     }
 
     #[Route('/dashboard/apiCaisse/abo/noPrint', name: 'noPrint')]
-    public function noPrint(): Response
+    public function noPrint(ReliuresRepository $typeReliure, PriceTypePaperRepository $typePaper, PricePhotoRepository $typePhoto ): Response
     {
+        $reliures = $typeReliure->findAll();
+        $papers = $typePaper->findAll();
+        $photos = $typePhoto->findAll();
+
         return $this->render('dashboard/apiCaisse/noPrint.html.twig', [
-            'controller_name' => 'DashboardController',
+            'reliures' =>$reliures,
+            'papers' =>$papers,
+            'photos' =>$photos
+            
         ]);
     }
 

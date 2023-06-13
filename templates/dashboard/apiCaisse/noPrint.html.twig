@@ -6,9 +6,67 @@
         <div class="container">
             {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
             <h1>Caisse de <span>Xtra Copy</span> : Encodage</h1>
-            <h2>Encoder l'opération</h2>
+            
+            <div class="formulaire">
+                <div class="copie">
+                    <h3>Copies</h3>
+                    <div class="formcopie">
+                        <label for="">Noir et blanc<p>0</p></label>
+                        <label for="">Couleurs<p>0</p></label>
+                    </div>
+                </div>
+                <div class="reliures">
+                    <h3>Reliures</h3>
+                    <ul>
+                        {% for reliure in reliures %}
+                        <li class='reliure calcul'><label for="">{{ reliure.Name }}</label>
+                            <input type="number" placeholder=0 data={{reliure.price}}>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="papier">
+                    <h3>Type de papier</h3>
+                    <ul>
+                        {% for paper in papers %}
+                        <li class='paper calcul'><label for="">{{ paper.Name }}</label>
+                            <input type="number" placeholder=0 data={{paper.price}}>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="photo">
+                    <h3>Photos</h3>
+                    <ul>
+                        {% for photo in photos %}
+                        <li class='photos calcul'><label for="">{{ photo.Name }}</label>
+                            <input type="number" placeholder=0 data={{photo.price}}>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="autre">
+                    <h3>Divers</h3>
+                    <div class="center">
+                        <input type="number" placeholder=0>
+                    </div>
+                    <div class="euro">€</div>
+                </div>
+                <div class="total">
+                    <h3>Total</h3>
+                    <p><span>0</span> €</p>
+                </div>
+                <div class="link">
+                    <input type="submit" value="Valider">
+                    <a href="{{ path('indexClient') }}">Retour</a>
+                </div>
+            </div>
         </div>
         {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
     </div>
 </div>
+{% endblock %}
+{% block javascripts %}
+{{ parent() }}
+{{ encore_entry_script_tags('calcul') }}
 {% endblock %}
