@@ -1,18 +1,41 @@
 {% extends 'baseConnect.html.twig' %}
-{% block title %}Ajout abonnement{% endblock %}
+{% block title %}{% endblock %}
 {% block body %}
 <div class="administration">
     <div class="content">
         <div class="container">
-            {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
-            <h1>Caisse de <span>Xtra Copy</span> : Ajout abonnement</h1>
-            <div class="link">
-                <ul>
-                    <li><a href="{{ path('aboIndex') }}">Retour</a></li>
-                </ul>
+        {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
+            <h1>Ajouter un abonné <span>Xtra Copy</span></h1>
+            {{form_start(form)}}
+            <div class="formulaire">
+            
+            <div class="form-groupe">
+                {{ form_label(form.Nom) }}
+                {{ form_widget(form.Nom) }}
+                {{ form_errors(form.Nom) }}
             </div>
+            <div class="form-groupe">
+                {{ form_label(form.Surname) }}
+                {{ form_widget(form.Surname) }}
+                {{ form_errors(form.Surname) }}
+            </div>
+            <div class="form-groupe">
+                {{ form_label(form.mail) }}
+                {{ form_widget(form.mail) }}
+                {{ form_errors(form.mail) }}
+            </div>
+            <div class="button">
+             <button type="submit" class="send">Enregister</button>
+            
+            </div>
+            <div class="retour">
+            <a href="{{ path('aboIndex') }}">Retour</a>
+            </div>
+            </div>
+            {{form_end(form)}}
+           
         </div>
         {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
-    </div>
+    </div>    
 </div>
 {% endblock %}

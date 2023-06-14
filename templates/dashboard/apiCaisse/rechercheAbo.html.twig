@@ -6,10 +6,35 @@
         <div class="container">
             {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
             <h1>Caisse de <span>Xtra Copy</span> : Recherche abonné</h1>
-            <div class="link">
-                <ul>
-                    <li><a href="{{ path('aboIndex') }}">Retour</a></li>
+            {{ form_start(form) }}
+            <div class="formulaire">
+                <div class="form-groupe abo">
+                    {{ form_row(form.nom) }}
+                    {{ form_row(form.prenom) }}
+                </div>
+                <div class="button">
+                    <button type="submit">Rechercher</button>
+                </div>
+                {{ form_end(form) }}
+
+                {% if pagination|length > 0 %}
+                <h4>Résultats de la recherche</h4>
+                {{ knp_pagination_render(pagination) }}
+                <ul class='affiPagination'>
+                    {% for abonne in pagination %}
+                    <li><a href="{{path('EditAbo',{'id': abonne.id})}}">{{ abonne.Nom }} {{ abonne.Surname }}</a></li>
+                    {% endfor %}
                 </ul>
+
+                {% else %}
+                <div class="error">
+                    <p>Aucun résultat trouvé.</p>
+                </div>
+                {% endif %}
+
+                <div class="retour">
+                    <a href="{{ path('aboIndex') }}">Retour</a>
+                </div>
             </div>
         </div>
         {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}

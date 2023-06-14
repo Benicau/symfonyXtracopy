@@ -5,7 +5,7 @@
     <div class="content">
         <div class="container">
         {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
-            <h1>Ajouter un abonné <span>Xtra Copy</span></h1>
+            <h1>Editer abonné</h1>
             {{form_start(form)}}
             <div class="formulaire">
             
@@ -24,12 +24,25 @@
                 {{ form_widget(form.mail) }}
                 {{ form_errors(form.mail) }}
             </div>
+            <div class="form-groupe">
+                {{ form_label(form.Color) }}
+                {{ form_widget(form.Color) }}
+                {{ form_errors(form.Color) }}
+            </div>
+            <div class="form-groupe">
+                {{ form_label(form.BlackWhite) }}
+                {{ form_widget(form.BlackWhite) }}
+                {{ form_errors(form.BlackWhite) }}
+            </div>
             <div class="button">
              <button type="submit" class="send">Enregister</button>
             
             </div>
             <div class="retour">
-            <a href="{{ path('indexClient') }}">Retour</a>
+            <a href="{{ path('abosearch') }}">Retour</a>
+            </div>
+            <div class="delete">
+            <a href="{{ path('DeleteAbo', {'id': abo.id}) }}">Supprimer abonné</a>
             </div>
             </div>
             {{form_end(form)}}
@@ -39,9 +52,3 @@
     </div>    
 </div>
 {% endblock %}
-
-
-
-
-
-
