@@ -1,17 +1,43 @@
 {% extends 'baseConnect.html.twig' %}
-
-{% block title %}{% endblock %}
-
+{% block title %}Recherche abonnement{% endblock %}
 {% block body %}
 <div class="administration">
     <div class="content">
-        {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
         <div class="container">
+            {% include "dashboard/apiCaisse/partials/_logo.html.twig" %}
             <h1>Caisse de <span>Xtra Copy</span> : Recherche abonné</h1>
-            <h2>recherche abonner</h2>
+            {{ form_start(form) }}
+            <div class="formulaire">
+                <div class="form-groupe abo">
+                    {{ form_row(form.nom) }}
+                    {{ form_row(form.prenom) }}
+                </div>
+                <div class="button">
+                    <button type="submit">Rechercher</button>
+                </div>
+                {{ form_end(form) }}
+
+                {% if pagination|length > 0 %}
+                <h4>Résultats de la recherche</h4>
+                {{ knp_pagination_render(pagination) }}
+                <ul class='affiPagination'>
+                    {% for abonne in pagination %}
+                    <li><a href="{{path('aboPrintSelect',{'id': abonne.id})}}">{{ abonne.Nom }} {{ abonne.Surname }}</a></li>
+                    {% endfor %}
+                </ul>
+
+                {% else %}
+                <div class="error">
+                    <p>Aucun résultat trouvé.</p>
+                </div>
+                {% endif %}
+
+                <div class="retour">
+                    <a href="{{ path('indexClient') }}">Retour</a>
+                </div>
+            </div>
         </div>
         {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
     </div>
 </div>
-
 {% endblock %}

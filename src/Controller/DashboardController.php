@@ -3,24 +3,25 @@
 namespace App\Controller;
 
 use App\Entity\Abonne;
+use App\Entity\PrintQueue;
 use App\Form\AbonneEdit;
 use App\Form\AbonneType;
 use App\Form\SearchAbonneType;
 use App\Repository\AbonneRepository;
 use App\Repository\ReliuresRepository;
 use App\Repository\PricePhotoRepository;
+use App\Repository\PrintQueueRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use App\Repository\PriceTypePaperRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class DashboardController extends AbstractController
 {
-
+    
     #[Route('/dashboardAdmin', name: 'app_dashboardAdmin')]
     public function index(): Response
     {
@@ -139,7 +140,7 @@ class DashboardController extends AbstractController
     }
 
     #[Route('/dashboard/apiCaisse/abo/{id}/delete', name: 'DeleteAbo')]
-    public function deleteAbo(EntityManagerInterface $manager, Request $request, Abonne $abo ): Response
+    public function deleteAbo(EntityManagerInterface $manager, Abonne $abo ): Response
     {
         $this->addFlash('success', "L'abonné a bien été supprimé");
         
@@ -147,6 +148,27 @@ class DashboardController extends AbstractController
          $manager->flush();
          return $this->redirectToRoute('abosearch');
     }
+
+    #[Route('/dashboard/apiCaisse/print/{id}/delete', name: 'DeletePrint')]
+    public function deletePrint(EntityManagerInterface $manager, PrintQueue $prints ): Response
+    {
+        $this->addFlash('success', "Travail supprimé");
+        
+         $manager->remove($prints);
+         $manager->flush();
+         return $this->redirectToRoute('noAbo');
+    }
+
+    #[Route('/dashboard/apiCaisse/print/{id}/delete2', name: 'DeletePrint2')]
+    public function deletePrint2(EntityManagerInterface $manager, PrintQueue $prints ): Response
+    {
+        $this->addFlash('success', "Travail supprimé");
+        
+         $manager->remove($prints);
+         $manager->flush();
+         return $this->redirectToRoute('aboPrintSelect');
+    }
+
 
 
     #[Route('/dashboard/apiCaisse/abo/indexClient', name: 'indexClient')]
@@ -175,19 +197,70 @@ class DashboardController extends AbstractController
     
 
     #[Route('/dashboard/apiCaisse/abo/noAbo', name: 'noAbo')]
-    public function noAbo(): Response
+    public function noAbo(PrintQueueRepository $typePrint): Response
     {
+        $prints = $typePrint->findBy([], ['NumberPrint' => 'ASC']);
+
         return $this->render('dashboard/apiCaisse/noAbo.html.twig', [
-            'controller_name' => 'DashboardController',
+            'prints' =>$prints,
+        ]);
+    }
+
+
+    #[Route('/dashboard/apiCaisse/abo/print/select', name: 'aboPrintSelect')]
+    public function aboPrintSelect(PrintQueueRepository $typePrint, Request $request, AbonneRepository $abonneRepository): Response
+    {
+        $id = $request->query->get('id');
+        $abonne = $abonneRepository->find($id);
+        if ($abonne) {
+            $nom = $abonne->getNom();
+            $prenom = $abonne->getSurname();
+            $color = $abonne->getColor();
+            $blackWhite = $abonne->getBlackWhite();
+        }
+        $prints = $typePrint->findBy([], ['NumberPrint' => 'ASC']);
+        return $this->render('dashboard/apiCaisse/aboPrintSelect.html.twig', [
+            'prints' => $prints,
+            'nom' => $nom,
+            'prenom' => $prenom,
+            'color' => $color,
+            'blackWhite' => $blackWhite
         ]);
     }
 
     #[Route('/dashboard/apiCaisse/abo/withAbo', name: 'withAbo')]
-    public function withAbo(): Response
+    public function withAbo(Request $request, AbonneRepository $abonneRepository, PaginatorInterface $paginator): Response
     {
+
+        $form = $this->createForm(SearchAbonneType::class);
+        $form->handleRequest($request);
+
+        $queryBuilder = $abonneRepository->createQueryBuilder('a');
+        $queryBuilder->orderBy('a.Nom', 'ASC'); // Classement par ordre alphabétique sur le nom
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+            $nom = $data['nom'] ?? '';
+            $prenom = $data['prenom'] ?? '';
+
+            $queryBuilder
+                ->where('a.Nom LIKE :nom')
+                ->andWhere('a.Surname LIKE :prenom')
+                ->setParameter('nom', '%' . $nom . '%')
+                ->setParameter('prenom', '%' . $prenom . '%');
+        }
+
+        $pagination = $paginator->paginate(
+            $queryBuilder->getQuery(),
+            $request->query->getInt('page', 1),
+            5 // Nombre de résultats par page
+        );
+
         return $this->render('dashboard/apiCaisse/withAbo.html.twig', [
-            'controller_name' => 'DashboardController',
+            'form' => $form->createView(),
+            'pagination' => $pagination,
         ]);
+
     }
 
     #[Route('/dashboard/apiCaisse/abo/addAbo', name: 'addAboMenu')]

@@ -8,23 +8,28 @@
             <h1>Caisse de <span>Xtra Copy</span> : Selection d'imprimantes</h1>
             <div class="formulaire">
                 <h4>Selection de imprimantes</h4>
+                <div class="abonne">
+                <h3>{{ nom }} {{ prenom }}</h3>
+                <p>Couleur : <span class="clientColor">{{ color }}</span> (<strong class="cptColor">0</strong>)</p>
+                <p>Noir et blanc : <span class="blackWhite">{{ blackWhite }}</span>  (<strong class="cptBlackWhite">0</strong>)</p>     
+                </div>
                 <div class="allPrint">
                     {% for print in prints %}
                     <div class="printSelect">
                         <div class="info">
                             <ul>
                                 <li class="nbrPrint">Imprimante {{print.NumberPrint}}</li>
-                                <li class="resultat">Couleur : <span>{{ print.endColor - print.startColor }}</span></li>
-                                <li class="resultat">Noir et blanc :
+                                <li class="resultat color" data="{{print.id}}">Couleur : <span>{{ print.endColor - print.startColor }}</span> </li>
+                                <li class="resultat blackWhite" data="{{print.id}}" >Noir et blanc :
                                     <span>{{ print.endWhiteBlack - print.startWhiteBlack }}</span> </li>
                             </ul>
                         </div>
                         <div class="choix">
-                            <input type="checkbox" class="selection-checkbox" id="myCheckbox">
+                            <input type="checkbox" class="printSelected" id={{ print.id }}>
                             <label for="myCheckbox" class="checkbox-label">Sélectionner</label>
                         </div>
                         <div class="deletePrint">
-                            <a href="{{path('DeletePrint',{'id': print.id})}}">Supprimer</a>
+                            <a href="{{path('DeletePrint2',{'id': print.id})}}">Supprimer</a>
                         </div>
                     </div>
                     {% endfor %}
@@ -37,7 +42,7 @@
                         <a href="#" onclick="window.location.reload()">Rafraichir</a>
                     </div>
                     <div class="linkReturn">
-                        <a href="{{ path('indexClient') }}">Retour</a>
+                        <a href="{{ path('withAbo') }}">Retour</a>
                     </div>
 
                 </div>
@@ -46,4 +51,6 @@
         {% include "dashboard/apiCaisse/partials/_footer.html.twig" %}
     </div>
 </div>
+
+
 {% endblock %}

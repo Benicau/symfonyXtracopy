@@ -7,5 +7,12 @@
   "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-f3bcae.js": "http://localhost:8080/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-f3bcae.js",
   "build/assets_styles_app_scss.css": "http://localhost:8080/build/assets_styles_app_scss.css",
   "build/fonts/Barlow-Regular.ttf": "http://localhost:8080/build/fonts/Barlow-Regular.e7eb634d.ttf",
-  "build/fonts/ScriptoramaMarkdownJFRegular.ttf": "http://localhost:8080/build/fonts/ScriptoramaMarkdownJFRegular.0283734c.ttf"
+  "build/fonts/ScriptoramaMarkdownJFRegular.ttf": "http://localhost:8080/build/fonts/ScriptoramaMarkdownJFRegular.0283734c.ttf",
+  "build/app.css": "http://localhost:8080/build/app.css",
+  "build/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-3885b1.js": "http://localhost:8080/build/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_localhost_por-3885b1.js",
+  "build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--189d0c.js": "http://localhost:8080/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_internals_dom--189d0c.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-50a780.js": "http://localhost:8080/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_da-50a780.js",
+  "build/vendors-node_modules_core-js_modules_es_array_filter_js-node_modules_core-js_modules_es_array-ae30e8.js": "http://localhost:8080/build/vendors-node_modules_core-js_modules_es_array_filter_js-node_modules_core-js_modules_es_array-ae30e8.js",
+  "build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-796f3c.js": "http://localhost:8080/build/vendors-node_modules_core-js_modules_es_array_for-each_js-node_modules_core-js_modules_es_arr-796f3c.js",
+  "build/vendors-node_modules_core-js_modules_es_array_filter_js-node_modules_core-js_modules_es_array-04cb9a.js": "http://localhost:8080/build/vendors-node_modules_core-js_modules_es_array_filter_js-node_modules_core-js_modules_es_array-04cb9a.js"
 }
